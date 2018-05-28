@@ -24,12 +24,19 @@ public class HeatGunProgramNodeContribution implements ProgramNodeContribution {
 		this.model = model;
 	}
 	
-	@Input(id = "yourname")
-	private InputTextField nameTextField;
-	@Input(id = "yourname2")
-	private InputTextField nameTextField2;
-	@Input(id = "yourname3")
-	private InputTextField nameTextField3;
+	@Input(id = "L")
+	private InputTextField L;
+	@Input(id = "H")
+	private InputTextField H;
+	@Input(id = "O")
+	private InputTextField O;
+	@Input(id = "S")
+	private InputTextField S;
+	@Input(id = "Ol")
+	private InputTextField Ol;
+	@Input(id = "Or")
+	private InputTextField Or;
+	
 
 	@Label(id = "titlePreviewLabel")
 	private LabelComponent titlePreviewLabel;
@@ -37,53 +44,54 @@ public class HeatGunProgramNodeContribution implements ProgramNodeContribution {
 	@Label(id = "messagePreviewLabel")
 	private LabelComponent messagePreviewLabel;
 
-	@Input(id = "yourname")
-	public void onInput(InputEvent event) {
-		if (event.getEventType() == InputEvent.EventType.ON_CHANGE) {
-			setName(nameTextField.getText());
-		}
-	}
-	
-
-	@Override
-	public void openView() {	
-	}
-
-	@Override
-	public void closeView() {
-	}
 
 	@Override
 	public String getTitle() {
 		return "HeatGun";
 		
 	}
-
+	
 	@Override
 	public boolean isDefined() {
+		if( L.getText() == "" || L.getText() == null || L.getText().length() == 0) {
+			return false;
+		}
+		if( H.getText() == "" || H.getText() == null || H.getText().length() == 0) {
+			return false;
+		}
+		if( O.getText() == "" || O.getText() == null || O.getText().length() == 0) {
+			return false;
+		}
+		if( S.getText() == "" || S.getText() == null || S.getText().length() == 0) {
+			return false;
+		}
+		if( Ol.getText() == "" || Ol.getText() == null || Ol.getText().length() == 0) {
+			return false;
+		}
+		if( Or.getText() == "" || Or.getText() == null || Or.getText().length() == 0) {
+			return false;
+		}
 		return true;
 	}
 	
 	@Override
 	public void generateScript(ScriptWriter writer) {
-
+		writer.appendLine("L ="+L.getText());
+		writer.appendLine("H ="+H.getText());
+		writer.appendLine("O ="+O.getText());
+		writer.appendLine("S ="+S.getText());
+		writer.appendLine("Ol ="+Ol.getText());
+		writer.appendLine("Or ="+Or.getText());
+		
 		writer.sync();
 		//}
 	}
 
-	private String generatePopupMessage() {
-		return model.isSet(NAME) ? "Hello " + getName() + ", welcome to PolyScope!" : "No name set";
+	@Override
+	public void openView() {
 	}
 
-	private String getName() {
-		return model.get(NAME, "");
-	}
-
-	private void setName(String name) {
-		if ("".equals(name)){
-			model.remove(NAME);
-		}else{
-			model.set(NAME, name);
-		}
+	@Override
+	public void closeView() {
 	}
 }

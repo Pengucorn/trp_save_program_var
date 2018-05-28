@@ -1,5 +1,5 @@
 HeatGun/urcap/HeatGunProgramNodeContribution.class
-HeatGun/urcap/HeatGunProgramNodeService.class
-HeatGun/urcap/FileManipulate.class
 HeatGun/urcap/Activator.class
+HeatGun/urcap/FileManipulate.class
+HeatGun/urcap/HeatGunProgramNodeService.class
 HeatGun/urcap/DashboardServerInterface.class

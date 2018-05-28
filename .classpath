@@ -27,24 +27,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/stefan/.m2/repository/com/ur/urcap/api/1.2.56/api-1.2.56.jar" sourcepath="/home/stefan/.m2/repository/com/ur/urcap/api/1.2.56/api-1.2.56-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/home/stefan/.m2/repository/com/ur/urcap/api/1.2.56/api-1.2.56-javadoc.jar!/"/>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.ur.urcap"/>
-			<attribute name="maven.artifactId" value="api"/>
-			<attribute name="maven.version" value="1.2.56"/>
-			<attribute name="maven.scope" value="provided"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/stefan/.m2/repository/org/osgi/org.osgi.core/4.3.0/org.osgi.core-4.3.0.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.osgi"/>
-			<attribute name="maven.artifactId" value="org.osgi.core"/>
-			<attribute name="maven.version" value="4.3.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
