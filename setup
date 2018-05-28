@@ -1,0 +1,6 @@
+#!/bin/bash
+mvn clean install
+wait
+if [ -e  ./target/HeatGun-alpha.urcap ]; then
+    cp ./target/HeatGun-alpha.urcap ~/Desktop/programs.UR3/heatgun-alpha.urcap
+fi

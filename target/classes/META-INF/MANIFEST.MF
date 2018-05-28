@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1527471209994
+Build-Jdk: 1.8.0_162
+Built-By: stefan
+Bundle-Activator: HeatGun.urcap.Activator
+Bundle-Category: URCap
+Bundle-ManifestVersion: 2
+Bundle-Name: HeatGun
+Bundle-SymbolicName: HeatGun.urcap.HeatGun
+Bundle-Version: 0.0.0.alpha
+Created-By: Apache Maven Bundle Plugin
+Export-Package: HeatGun.urcap;version="0.0.0.alpha";uses:="com.ur.urcap.
+ api.contribution,com.ur.urcap.api.domain,com.ur.urcap.api.domain.data,c
+ om.ur.urcap.api.domain.script,com.ur.urcap.api.ui.annotation,com.ur.urc
+ ap.api.ui.component,org.osgi.framework"
+Import-Package: com.ur.urcap.api.contribution;version="[1.0.0,2.0.0)",co
+ m.ur.urcap.api.domain;version="[1.0.0,2.0.0)",com.ur.urcap.api.domain.d
+ ata;version="[1.0.0,2.0.0)",com.ur.urcap.api.domain.script;version="[1.
+ 0.0,2.0.0)",com.ur.urcap.api.ui.annotation;version="[1.0.0,2.0.0)",com.
+ ur.urcap.api.ui.component;version="[1.0.0,2.0.0)",org.osgi.framework;ve
+ rsion="[1.6,2)"
+Tool: Bnd-2.1.0.20130426-122213
